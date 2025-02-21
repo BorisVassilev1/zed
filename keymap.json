@@ -1,0 +1,42 @@
+[
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-f5": ["task::Spawn", { "task_name": "Run c++ file" }],
+			"f5": ["task::Spawn", { "task_name": "CompileRun c++ file" }],
+			"f6": ["task::Spawn", { "task_name": "Run Make" }],
+			"ctrl-F": ["task::Spawn", { "task_name": "search:project" }],
+			"alt-h": ["workspace::ActivatePaneInDirection", "Left"],
+			"alt-j": ["workspace::ActivatePaneInDirection", "Down"],
+			"alt-k": ["workspace::ActivatePaneInDirection", "Up"],
+			"alt-l": ["workspace::ActivatePaneInDirection", "Right"],
+			"alt-o": "editor::ToggleTabBar",
+			"alt-i": "workspace::ToggleLeftDock",
+			"alt-w": "pane::CloseActiveItem",
+			"alt-q": "workspace::ToggleZoom",
+			"alt-r": "workspace::ToggleVimMode",
+			"alt-e": "workspace::ToggleBottomDock"
+		}
+	},
+	{
+		"context": "vim_mode == normal",
+		"bindings": {
+			"space s f": [
+				"task::Spawn",
+				{ "task_name": "File Finder", "reveal_target": "center" }
+			],
+			"space s g": [
+				"task::Spawn",
+				{ "task_name": "Find in Files", "reveal_target": "center" }
+			],
+			"space space": "tab_switcher::Toggle"
+		}
+	},
+	{
+		"context": "Terminal",
+		"bindings": {
+			"ctrl-w": "pane::CloseActiveItem",
+			"alt-t": "editor::ToggleTabBar"
+		}
+	}
+]

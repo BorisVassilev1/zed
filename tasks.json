@@ -1,0 +1,45 @@
+// Static tasks configuration.
+//
+// Example:
+[
+	{
+		"label": "CompileRun c++ file",
+		"command": "g++ \"$ZED_FILE\" -std=c++20 -fsanitize=address -g && ./a.out",
+		"use_new_terminal": false,
+		"allow_concurrent_runs": false,
+		"reveal": "always",
+		"problemMatcher": "$gcc",
+		"show_command": false
+	},
+	{
+		"label": "Run c++ file",
+		"command": "./a.out",
+		"use_new_terminal": false,
+		"reveal": "always"
+	},
+	{
+		"label": "Run Make",
+		"command": "make && ./a.out",
+		"use_new_terminal": false,
+		"reveal": "always",
+		"problemMatcher": "$gcc",
+		"allow_concurrent_runs": false,
+		"shell": "system",
+		"show_command": false,
+		"cwd": "$ZED_DIRNAME"
+	},
+	{
+		"label": "File Finder",
+		"command": "zeditor \"$(tv files)\"",
+		"hide": "always",
+		"allow_concurrent_runs": true,
+		"use_new_terminal": true
+	},
+	{
+		"label": "Find in Files",
+		"command": "zeditor \"$(tv text)\"",
+		"hide": "always",
+		"allow_concurrent_runs": true,
+		"use_new_terminal": true
+	}
+]
