@@ -4,7 +4,11 @@
 		"bindings": {
 			"ctrl-f5": ["task::Spawn", { "task_name": "Run c++ file" }],
 			"f5": ["task::Spawn", { "task_name": "CompileRun c++ file" }],
-			"f6": ["task::Spawn", { "task_name": "Run Make" }],
+			"f6": ["task::Spawn", { "task_name": "Make current directory" }],
+			"ctrl-f6": [
+				"task::Spawn",
+				{ "task_name": "Run current directory" }
+			],
 			"ctrl-F": ["task::Spawn", { "task_name": "search:project" }],
 			"alt-h": "workspace::ActivatePaneLeft",
 			"alt-j": "workspace::ActivatePaneDown",

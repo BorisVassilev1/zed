@@ -18,11 +18,21 @@
 		"reveal": "always"
 	},
 	{
-		"label": "Run Make",
+		"label": "Make current directory",
 		"command": "make && ./a.out",
 		"use_new_terminal": false,
 		"reveal": "always",
 		"problemMatcher": "$gcc",
+		"allow_concurrent_runs": false,
+		"shell": "system",
+		"show_command": false,
+		"cwd": "$ZED_DIRNAME"
+	},
+	{
+		"label": "Run current directory",
+		"command": "./a.out",
+		"use_new_terminal": false,
+		"reveal": "always",
 		"allow_concurrent_runs": false,
 		"shell": "system",
 		"show_command": false,
